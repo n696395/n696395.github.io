@@ -9,6 +9,11 @@
 
 
 
+    <meta name="description" content="問題啟動container出現Ports are not available的錯訊息error
+原因可能是Windows NAT Driver (winnat)引起的
+解決辦法停止服務後再啟動container
+123net stop winnatdocker start ...net start "/>
+
 
 <!--Author-->
 
@@ -17,10 +22,15 @@
 
 <!--Open Graph Title-->
 
-    <meta property="og:title" content="Luke"/>
+    <meta property="og:title" content="Docker desktop for windows啟動container出錯"/>
 
 
 <!--Open Graph Description-->
+
+    <meta property="og:description" content="問題啟動container出現Ports are not available的錯訊息error
+原因可能是Windows NAT Driver (winnat)引起的
+解決辦法停止服務後再啟動container
+123net stop winnatdocker start ...net start "/>
 
 
 <!--Open Graph Site Name-->
@@ -28,7 +38,7 @@
 
 <!--Type page-->
 
-    <meta property="og:type" content="website"/>
+    <meta property="og:type" content="article"/>
 
 
 <!--Page Cover-->
@@ -47,7 +57,7 @@
 
 <!-- Title -->
 
-<title>ECN | Luke</title>
+<title>Docker desktop for windows啟動container出錯 | Luke</title>
 
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
@@ -108,67 +118,135 @@
 </nav>
 
     <!-- Main Content -->
-    <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                <div class="site-heading text-center text-white">
-                    <h1>Tag: ECN:</h1>
+            <div class="col-lg-12 col-md-12 text-center">
+                <div class="post-heading text-white">
+                    <h1>Docker desktop for windows啟動container出錯</h1>
+                    
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container page-tags">
-    <div class="row">
-        <div class="col-lg-10 offset-lg-1 text-center">
-            
-                
-    <a href="/tags/ECN/" class="btn btn-info m-2">
-        ECN
-        <span class="badge badge-light">1</span>
-    </a>
-
-
-            
-                
-    <a href="/tags/Docker/" class="btn btn-light m-2">
-        Docker
-    </a>
-
-
-            
-        </div>
-        
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Main Content -->
             <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-                <hr class="tag-preview-hr">
                 
-                    <div class="post-preview post-preview-archive-tag">
-    <a href="/2021/03/12/ECN/">
-        <h1 class="post-title">
-            Windows Server 2019 TCP連線很慢
-        </h1>
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2021-03-12
-    </p>
-</div>
-                
-                <div class="archive-before-pagination"></div>
-                <ul class="pagination d-block text-center">
+                    <span class="meta d-inline-block">
     
     
-</ul>
+    <!-- Date -->
+    
+        <span class="post-meta-split">&nbsp;|&nbsp;</span>
+        <i class="far fa-calendar-check fa-fw"></i>
+        2021-05-10
+    
+    <!-- word count and read count -->
+    
+
+    
+
+    
+</span>  
+                
+                <h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>啟動container出現Ports are not available的錯訊息<br><div class="img-item" data-src="https://i.imgur.com/4muFuJB.png" data-sub-html=".caption"><img src="https://i.imgur.com/4muFuJB.png" alt="error"><div class="img-caption d-block text-center"><span class="center-caption text-muted border-bottom">error</span></div></div></p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>可能是Windows NAT Driver (winnat)引起的</p>
+<h2 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h2><p>停止服務後再啟動container</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net stop winnat</span><br><span class="line">docker start ...</span><br><span class="line">net start winnat</span><br></pre></td></tr></table></figure>
+
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/65272764/ports-are-not-available-listen-tcp-0-0-0-0-50070-bind-an-attempt-was-made-to">https://stackoverflow.com/questions/65272764/ports-are-not-available-listen-tcp-0-0-0-0-50070-bind-an-attempt-was-made-to</a></p>
+
             </div>
+
+            <!-- Post information -->
+            
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 post-tags">
+        
+            <i class="fas fa-tag" style="vertical-align: middle;font-size: .8rem;"></i>
+            tags:&nbsp;
+            
+            
+        
+            <a href="/tags/Docker/">#Docker</a>
         
     </div>
-</div>
+
+            
+    <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <ul class="pagination d-block text-center">
+            
+            
+                <li class="next page-item d-inline"><a href="/2021/03/12/ECN/" class="page-link float-right">Older  &rarr;</a></li>
+            
+        </ul>
+    </div>
 
 
+            
+                <!-- Comments -->
+                
+
+                
+
+            
+
+        </div>
+    </div>
+</article> 
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+    <style>
+        #toc-content .toc-link::before {
+            background-color: transparent;
+            max-height: 25px;
+        }
+
+        #toc-content .toc-link.is-active-link::before {
+            background-color: #404040;
+        }
+    </style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    <div class="ui-toc dropup scrollspy-body pull-right" style="right: 3%;">
+        <button type="button" class="toc-btn btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
+            <i class="fas fa-list"></i>
+        </button>
+        <div class="dropdown-menu dropdown-menu-right p-2"  aria-labelledby="tocLabel">
+            <div class="toc-widget">
+                <div id="toc-content" class="text-truncate">
+                </div>
+            </div>
+            <div class="toc-menu pt-3 pl-4">
+                <a class="expand-toggle d-block py-1" href="#"><span class="expand-text">Expand all</span><span class="close-text" style="display: none;">Collapse all</span></a>
+                <a class="back-to-top d-block py-1" href="#">Back to top</a>
+                <a class="go-to-bottom d-block py-1" href="#">Go to bottom</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '#toc-content',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: 'article',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+    </script>
+
+
+    
 
 
     <!-- Footer -->
